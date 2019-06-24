@@ -1,23 +1,10 @@
-#!/usr/bin/env groovy
-
-pipeline {
-
-    agent {
-        
-    }
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                
-            }
-        }
-    }
+node {
+  stage('SCM') {
+    git 'https://github.com/4ll3n/dotnet.git'
+  }
+  stage('SonarQube analysis') {
+    withSonarQubeEnv('My SonarQube Server') {
+      sh 'mvn clean package sonar:sonar'
+    } // SonarQube taskId is automatically attached to the pipeline context
+  }
 }
