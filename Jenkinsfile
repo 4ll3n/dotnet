@@ -17,7 +17,7 @@ node {
 
     withSonarQubeEnv('SonarQube Server') {
 
-      sh "${sonarqubeScanner}/bin/sonar-scanner -Dsonar.projectKey=devops-python -Dsonar.sources=. -Dsonar.host.url=http://35.198.252.54:9000 -Dsonar.login=fb78c2252c41c3ce6863088b0cb1cd19ab737ad2"
+      sh "${sonarqubeScanner}/bin/sonar-scanner -Dsonar.projectKey=devops-dotnet -Dsonar.sources=. -Dsonar.host.url=http://35.198.252.54:9000 -Dsonar.login=fb78c2252c41c3ce6863088b0cb1cd19ab737ad2"
 
     }
 
