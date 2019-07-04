@@ -41,12 +41,10 @@ node {
 
   
 
-  stage('Test Dotnet'){
+  stage('Deploy'){
 
     //TBC, transfer hello.py to hyebin:/app
     
-   bat "dotnet restore"
-
     
 
   }
