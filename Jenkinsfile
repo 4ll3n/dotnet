@@ -45,7 +45,7 @@ node {
 
     //TBC, transfer hello.py to hyebin:/app
     
-   sh "dotnet restore"
+   bat "dotnet restore"
 
     
 
